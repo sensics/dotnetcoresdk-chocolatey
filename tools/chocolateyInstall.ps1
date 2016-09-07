@@ -1,8 +1,9 @@
 $packageName = 'DotNetCoreSDK'
 $fileType = 'exe'
 $silentArgs = '/quiet'
-$url = 'https://go.microsoft.com/fwlink/?LinkID=798398'
-$version = '1.0.0.RC2'
+$url32 = 'https://go.microsoft.com/fwlink/?LinkID=809123'
+$url64 = 'https://go.microsoft.com/fwlink/?LinkID=809122'
+$version = '1.0.0.Preview2'
 
 function Test-RegistryValue {
 
@@ -32,7 +33,7 @@ catch {
 function CheckDotNetCliInstalled {
 
     $registryPath = 'HKLM:\SOFTWARE\Wow6432Node\dotnet\Setup\InstalledVersions\x64\sharedfx\Microsoft.NETCore.App'
-    if (Test-RegistryValue -Path $registryPath -Value 1.0.0-rc2) {
+    if (Test-RegistryValue -Path $registryPath -Value 1.0.0-preview) {
         return $true
     }
 }
@@ -40,10 +41,10 @@ function CheckDotNetCliInstalled {
 if (CheckDotNetCliInstalled) {
     Write-Host "Microsoft .Net Core SDK is already installed on your machine."
 }
-elseif (Get-ProcessorBits(32)){
-    throw "32 bit Microsoft .Net Core SDK is not available."
+elseif (Get-ProcessorBits(32)) {
+	Install-ChocolateyPackage $packageName $fileType $silentArgs '' $url32
 }
 else {
-	Install-ChocolateyPackage $packageName $fileType $silentArgs '' $url
+	Install-ChocolateyPackage $packageName $fileType $silentArgs '' $url64
 }
 
