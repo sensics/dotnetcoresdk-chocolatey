@@ -7,7 +7,6 @@
     <authors>Microsoft</authors>
     <owners>Sensics, Inc.</owners>
     <iconUrl>https://raw.githubusercontent.com/sensics/dotnetcoresdk-chocolatey/master/dotnet.png</iconUrl>
-    <packageSourceUrl>https://github.com/sensics/dotnetcli-chocolatey.git</packageSourceUrl>
     <licenseUrl>http://msdn.microsoft.com/en-US/cc300389.aspx</licenseUrl>
     <projectUrl>https://www.microsoft.com/net/core#windows</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
