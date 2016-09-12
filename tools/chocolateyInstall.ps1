@@ -1,8 +1,8 @@
 $packageName = 'DotNetCoreSDK'
 $fileType = 'exe'
 $silentArgs = '/quiet'
-$url32 = 'https://go.microsoft.com/fwlink/?LinkID=809123'
-$url64 = 'https://go.microsoft.com/fwlink/?LinkID=809122'
+$url32 = 'https://download.microsoft.com/download/A/3/8/A38489F3-9777-41DD-83F8-2CBDFAB2520C/packages/DotNetCore.1.0.0-SDK.Preview2-x86.exe' # 'https://go.microsoft.com/fwlink/?LinkID=809123'
+$url64 = 'https://download.microsoft.com/download/A/3/8/A38489F3-9777-41DD-83F8-2CBDFAB2520C/packages/DotNetCore.1.0.0-SDK.Preview2-x64.exe' # 'https://go.microsoft.com/fwlink/?LinkID=809122'
 $version = '1.0.0.Preview2'
 
 function Test-RegistryValue {
@@ -47,4 +47,3 @@ elseif (Get-ProcessorBits(32)) {
 else {
 	Install-ChocolateyPackage $packageName $fileType $silentArgs '' $url64
 }
-
