@@ -9,6 +9,7 @@
     <iconUrl>https://raw.githubusercontent.com/sensics/dotnetcoresdk-chocolatey/master/dotnet.png</iconUrl>
     <licenseUrl>http://msdn.microsoft.com/en-US/cc300389.aspx</licenseUrl>
     <projectUrl>https://www.microsoft.com/net/core#windows</projectUrl>
+    <packageSourceUrl>https://github.com/sensics/dotnetcli-chocolatey.git</packageSourceUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>.NET Core is a set of runtime, library and compiler components. Microsoft uses these components in various configurations for device and cloud workloads. You can do the same for your app or service. 
     Managed runtimes make code easy to write and guarantee safe execution. .NET Core manages memory with a garbage collector, compiles your code with a JIT compiler or ahead of time with .NET Native.
